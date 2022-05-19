@@ -1,0 +1,39 @@
+.groups {
+  padding-top: var(--section-size);
+  padding-bottom: var(--section-size);
+  text-align: center;
+}
+.groups-list {
+  display: flex;
+  justify-content: center;
+}
+.groups-item + .groups-item {
+  margin-left: 30px;
+}
+.groups-link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px Solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+.groups-icon {
+  fill: #afb1b8;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  .groups-link:hover &,
+  :focus & {
+    fill: var(--accent-color);
+  }
+}

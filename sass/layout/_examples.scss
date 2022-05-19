@@ -1,0 +1,27 @@
+.examples {
+  padding-bottom: var(--section-size);
+}
+.examples_list {
+  display: flex;
+  justify-content: space-between;
+}
+.examples_item {
+  position: relative;
+}
+.examples_description {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--primary-white-color);
+}
