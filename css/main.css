@@ -93,6 +93,12 @@ img {
   color: var(--title-color);
   margin-bottom: 50px;
 }
+@media screen and (max-width: 1199px) {
+  .section_title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+}
 
 .backdrop {
   position: fixed;
@@ -513,8 +519,8 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .description {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: var(--section-size);
+    padding-bottom: var(--section-size);
   }
 }
 
@@ -602,6 +608,11 @@ img {
 .examples {
   padding-bottom: var(--section-size);
 }
+@media screen and (max-width: 1199px) {
+  .examples {
+    display: none;
+  }
+}
 
 .examples_list {
   display: -webkit-box;
@@ -642,23 +653,47 @@ img {
 
 .team {
   max-width: 1600px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin: auto;
   background-color: #f5f4fa;
-  padding-top: var(--section-size);
-  padding-bottom: var(--section-size);
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: var(--section-size);
+    padding-bottom: var(--section-size);
+  }
 }
 
 .team-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-bottom: -30px;
 }
-
-.team-item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -30px;
+  }
 }
-
-.team-content {
+.team-list .team-item {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .team-list .team-item {
+    width: calc(50% - 30px);
+    margin-right: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list .team-item {
+    width: calc(25% - 30px);
+    margin-right: 30px;
+  }
+}
+.team-list .team-content {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -667,8 +702,7 @@ img {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-
-.team-title {
+.team-list .team-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -676,8 +710,7 @@ img {
   color: #212121;
   margin-bottom: 10px;
 }
-
-.team-text {
+.team-list .team-text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -685,8 +718,7 @@ img {
   color: var(--primary-text-color);
   margin-bottom: 16px;
 }
-
-.team-soc-list {
+.team-list .team-soc-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -694,12 +726,10 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
-.team-soc-item + .team-soc-item {
+.team-list .team-soc-item + .team-soc-item {
   margin-left: 10px;
 }
-
-.team-soc-link {
+.team-list .team-soc-link {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -719,16 +749,15 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-soc-link:hover, .team-soc-link:focus {
+.team-list .team-soc-link:hover, .team-list .team-soc-link:focus {
   background-color: var(--accent-color);
 }
-
-.team-soc-icon {
+.team-list .team-soc-icon {
   fill: #afb1b8;
   -webkit-transition: fill 250ms;
   transition: fill 250ms;
 }
-.team-soc-link:hover .team-soc-icon, :focus .team-soc-icon {
+.team-soc-link:hover .team-list .team-soc-icon, :focus .team-list .team-soc-icon {
   fill: var(--primary-white-color);
 }
 

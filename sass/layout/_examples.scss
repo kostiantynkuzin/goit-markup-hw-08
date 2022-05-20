@@ -1,5 +1,8 @@
 .examples {
   padding-bottom: var(--section-size);
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
 }
 .examples_list {
   display: flex;
