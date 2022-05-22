@@ -468,6 +468,25 @@ img {
   margin-right: 10px;
 }
 
+.menu-btn {
+  display: inline-block;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-btn .icon-cross {
+  display: none;
+}
+
+.menu-btn.is-open .icon-cross {
+  display: block;
+}
+
+.menu-btn.is-open .icon-menu {
+  display: none;
+}
+
 .hero {
   position: relative;
   background: #c4c4c4;
