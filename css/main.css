@@ -1018,7 +1018,6 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
   max-width: 1600px;
-  margin: 0 auto;
   text-align: center;
 }
 @media screen and (min-width: 1200px) {
@@ -1047,7 +1046,7 @@ img {
 .footer-adress {
   margin-bottom: 60px;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer-adress {
     margin-left: 76px;
     margin-right: 165px;
@@ -1057,6 +1056,7 @@ img {
   .footer-adress {
     margin-left: 0;
     margin-right: 70px;
+    margin-bottom: 0;
   }
 }
 
@@ -1094,6 +1094,15 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.soc-network {
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .soc-network {
+    margin-bottom: 0;
+  }
+}
+
 .soc-title {
   font-size: 14px;
   line-height: 1.14;
@@ -1107,6 +1116,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .soc-item + .soc-item {
@@ -1142,14 +1154,15 @@ img {
   fill: var(--primary-white-color);
 }
 
-.subscribe {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+@media screen and (min-width: 768px) {
+  .subscribe {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
-    margin-left: 93px;
+    margin-right: 0;
   }
 }
 
@@ -1163,8 +1176,15 @@ img {
   margin-bottom: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .subscribe-input {
-  display: block;
   width: 100%;
   min-height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1197,7 +1217,7 @@ img {
 }
 
 .subscribe-btn {
-  min-width: 200px;
+  max-width: 200px;
   min-height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -1210,8 +1230,10 @@ img {
   border-radius: 4px;
   border: var(--accent-color);
   outline: none;
-  display: inline-block;
+  display: block;
   padding: 10px 29px;
+  margin-right: auto;
+  margin-left: auto;
   cursor: pointer;
 }
 .subscribe-btn:hover, .subscribe-btn:focus {
