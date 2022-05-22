@@ -19,6 +19,11 @@
 .accent {
   color: var(--accent-color);
 }
+.menu-open-btn {
+  margin-left: auto;
+  border: 0;
+  background-color: transparent;
+}
 .main-nav {
   display: flex;
   align-items: center;
@@ -26,6 +31,7 @@
 .main-nav_list {
   display: flex;
   align-items: center;
+  display: none;
 }
 .main-nav_list .main-nav_item:not(:last-child) {
   margin-right: 50px;
@@ -62,6 +68,7 @@
 .connect-list {
   display: flex;
   margin-left: auto;
+  display: none;
 }
 .connect-list .connect-list_item + .connect-list_item {
   margin-left: 30px;
@@ -98,4 +105,22 @@
 }
 .menu-btn.is-open .icon-menu {
   display: none;
+}
+.mob-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  .container {
+    display: block;
+  }
+}
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
 }

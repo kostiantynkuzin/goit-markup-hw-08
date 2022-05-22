@@ -372,6 +372,12 @@ img {
   color: var(--accent-color);
 }
 
+.menu-open-btn {
+  margin-left: auto;
+  border: 0;
+  background-color: transparent;
+}
+
 .main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -388,6 +394,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .main-nav_list .main-nav_item:not(:last-child) {
@@ -435,6 +442,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   margin-left: auto;
+  display: none;
 }
 
 .connect-list .connect-list_item + .connect-list_item {
@@ -485,6 +493,26 @@ img {
 
 .menu-btn.is-open .icon-menu {
   display: none;
+}
+
+.mob-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.mob-menu .container {
+  display: block;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
 }
 
 .hero {
