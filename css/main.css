@@ -348,9 +348,7 @@ img {
   border-bottom: 1px solid #ececec;
 }
 .header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -503,16 +501,81 @@ img {
   background-color: white;
   width: 100vw;
   height: 100vh;
-  padding-top: 48px;
-  padding-bottom: 48px;
 }
 .mob-menu .container {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .menu-close-btn {
   display: block;
   margin-left: auto;
+  border: 0;
+  background-color: transparent;
+}
+
+.mob-nav_link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mob-connect-list_item {
+  margin-bottom: 32px;
+}
+
+.mob-connect-list_tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17px;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.mob-connect-list_mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16px;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mob-soc-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mob-soc_link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.mob-soc-list_item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
+  margin-right: 20px;
 }
 
 .hero {
