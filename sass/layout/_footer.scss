@@ -7,14 +7,19 @@
   @media screen and (min-width: 1200px) {
     text-align: start;
   }
+  .logo {
+    display: inline-block;
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: var(--primary-white-color);
+  }
 }
-.logo {
-  display: inline-block;
-  margin-right: 0;
-  margin-bottom: 20px;
-  color: var(--primary-white-color);
-}
-
 .footer-content {
   @media screen and (min-width: 768px) {
     display: flex;

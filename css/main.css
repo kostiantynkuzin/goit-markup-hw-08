@@ -355,8 +355,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.logo {
+.header .logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -372,13 +371,10 @@ img {
   color: var(--accent-color);
 }
 
-.main-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.menu-open-btn {
+  margin-left: auto;
+  border: 0;
+  background-color: transparent;
 }
 
 .main-nav_list {
@@ -482,12 +478,37 @@ img {
   padding-bottom: 48px;
 }
 .mob-menu .container {
-  display: block;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .menu-close-btn {
   display: block;
   margin-left: auto;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.menu-close-btn:focus, .menu-close-btn:hover {
+  fill: var(--accent-color);
+}
+
+.mob-menu-top {
+  width: 100%;
+  margin-bottom: 306px;
 }
 
 .mob-nav_item:not(:last-child) {
@@ -505,6 +526,14 @@ img {
 
 .mob-nav_link.current {
   color: var(--accent-color);
+}
+
+.mob-connect-list {
+  margin-bottom: 64px;
+}
+
+.mob-connect-list_item {
+  margin-bottom: 32px;
 }
 
 .mob-connect-list_tel {
@@ -529,17 +558,24 @@ img {
   display: flex;
 }
 
+.mob-soc-list_item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
 .mob-soc_link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  padding-right: 20px;
+  padding: 10px;
 }
-.mob-soc_link::after {
-  content: "";
-  border: 1px solid rgba(33, 33, 33, 0.2);
+.mob-soc_link:not(:first-child) {
+  padding-left: 10px;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .hero {
@@ -1099,11 +1135,16 @@ img {
     text-align: start;
   }
 }
-
-.logo {
+.footer .logo {
   display: inline-block;
   margin-right: 0;
   margin-bottom: 20px;
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
   color: var(--primary-white-color);
 }
 

@@ -4,25 +4,27 @@
     display: flex;
     align-items: center;
   }
-}
-.logo {
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: var(--accent-color);
-  color: #000000;
-  text-decoration: none;
-  margin-right: 93px;
+  .logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+    color: #000000;
+    text-decoration: none;
+    margin-right: 93px;
+  }
 }
 .accent {
   color: var(--accent-color);
 }
-.main-nav {
-  display: flex;
-  align-items: center;
+.menu-open-btn {
+  margin-left: auto;
+  border: 0;
+  background-color: transparent;
 }
+
 .main-nav_list {
   display: flex;
   align-items: center;
@@ -97,12 +99,28 @@
   padding-top: 10px;
   padding-bottom: 48px;
   .container {
-    display: block;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 }
 .menu-close-btn {
   display: block;
   margin-left: auto;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  &:focus,
+  &:hover {
+    fill: var(--accent-color);
+  }
+}
+.mob-menu-top {
+  width: 100%;
+  margin-bottom: 306px;
 }
 .mob-nav_item {
   &:not(:last-child) {
@@ -119,6 +137,13 @@
 }
 .mob-nav_link.current {
   color: var(--accent-color);
+}
+
+.mob-connect-list {
+  margin-bottom: 64px;
+}
+.mob-connect-list_item {
+  margin-bottom: 32px;
 }
 .mob-connect-list_tel {
   font-weight: 500;
@@ -137,15 +162,20 @@
 .mob-soc-list {
   display: flex;
 }
+.mob-soc-list_item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
 .mob-soc_link {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  padding-right: 20px;
-  &::after {
-    content: '';
-    border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 10px;
+  &:not(:first-child) {
+    padding-left: 10px;
   }
+}
+.no-scroll {
+  overflow: hidden;
 }
