@@ -376,15 +376,24 @@ img {
   border: 0;
   background-color: transparent;
 }
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+}
 
 .main-nav_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .main-nav_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .main-nav_list .main-nav_item:not(:last-child) {
@@ -428,15 +437,45 @@ img {
 }
 
 .connect-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .connect-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .connect-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.connect-list_item {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1200px) {
+  .connect-list_item {
+    margin-bottom: 0;
+  }
 }
 
 .connect-list .connect-list_item + .connect-list_item {
-  margin-left: 30px;
+  margin: left 0;
+}
+@media screen and (min-width: 1200px) {
+  .connect-list .connect-list_item + .connect-list_item {
+    margin-left: 30px;
+  }
 }
 
 .connect-list_mail,
@@ -447,7 +486,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -459,6 +497,12 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .connect-list_mail,
+.connect-list_tel {
+    padding: 32px 0;
+  }
 }
 
 .connect-list_icon {
@@ -987,30 +1031,32 @@ img {
 }
 
 .portfolio {
-  padding-top: var(--section-size);
-  padding-bottom: var(--section-size);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: var(--section-size);
+    padding-bottom: var(--section-size);
+  }
 }
 
 .portfolio-list-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 50px;
-}
-
-.portfolio-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .portfolio-item .button.current {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+}
+
+.portfolio-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button {
@@ -1044,20 +1090,30 @@ img {
 }
 
 .portfolio-list-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: -30px;
   margin-bottom: -30px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .portfolio-list-link > .portfolio-card-item {
-  -ms-flex-preferred-size: calc(33.3333333333% - 30px);
-      flex-basis: calc(33.3333333333% - 30px);
-  margin-left: 30px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-list-link > .portfolio-card-item {
+    -ms-flex-preferred-size: calc(33.3333333333% - 30px);
+        flex-basis: calc(33.3333333333% - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .img-wrap {

@@ -23,12 +23,16 @@
   margin-left: auto;
   border: 0;
   background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
-
 .main-nav_list {
-  display: flex;
-  align-items: center;
   display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
 }
 .main-nav_list .main-nav_item:not(:last-child) {
   margin-right: 50px;
@@ -63,18 +67,32 @@
   }
 }
 .connect-list {
-  display: flex;
-  margin-left: auto;
   display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
+}
+.connect-list_item {
+  margin-bottom: 10px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 }
 .connect-list .connect-list_item + .connect-list_item {
-  margin-left: 30px;
+  margin: left 0;
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 .connect-list_mail,
 .connect-list_tel {
   display: flex;
   align-items: center;
-  padding: 32px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -83,6 +101,9 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 1200px) {
+    padding: 32px 0;
+  }
 }
 .connect-list_icon {
   fill: currentColor;
@@ -138,7 +159,6 @@
 .mob-nav_link.current {
   color: var(--accent-color);
 }
-
 .mob-connect-list {
   margin-bottom: 64px;
 }

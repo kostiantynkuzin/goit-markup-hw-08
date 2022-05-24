@@ -1,19 +1,22 @@
 .portfolio {
-  padding-top: var(--section-size);
-  padding-bottom: var(--section-size);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: var(--section-size);
+    padding-bottom: var(--section-size);
+  }
 }
 .portfolio-list-btn {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
-}
-.portfolio-item:not(:last-child) {
-  margin-right: 8px;
 }
 .portfolio-item .button.current {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+}
+.portfolio-item:not(:last-child) {
+  margin-right: 8px;
 }
 .button {
   display: inline-block;
@@ -41,15 +44,21 @@
   }
 }
 .portfolio-list-link {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
   margin-bottom: -30px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 .portfolio-list-link > .portfolio-card-item {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-left: 30px;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
 }
 .img-wrap {
   position: relative;
@@ -69,8 +78,8 @@
   transform: translateY(100%);
   transition: transform 250ms linear;
   .portfolio-card-item:hover & {
-  transform: translate(0);
-}
+    transform: translate(0);
+  }
 }
 .portfolio-card-item {
   transition-property: box-shadow;
