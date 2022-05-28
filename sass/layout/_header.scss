@@ -112,6 +112,7 @@
 .mob-menu {
   position: fixed;
   z-index: 1;
+  overflow-y: auto;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -120,7 +121,6 @@
   padding-top: 10px;
   padding-bottom: 48px;
   .container {
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -141,7 +141,9 @@
 }
 .mob-menu-top {
   width: 100%;
-  margin-bottom: 306px;
+  @media screen and (min-width: 480px) {
+    margin-bottom: 306px;
+  }
 }
 .mob-nav_item {
   &:not(:last-child) {

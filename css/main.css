@@ -25,6 +25,7 @@ body {
   color: #757575;
   background-color: var(--primary-white-color);
   font-size: 14px;
+  overflow-y: hidden;
 }
 
 h1,
@@ -513,6 +514,7 @@ img {
 .mob-menu {
   position: fixed;
   z-index: 1;
+  overflow-y: auto;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -522,7 +524,6 @@ img {
   padding-bottom: 48px;
 }
 .mob-menu .container {
-  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,7 +553,11 @@ img {
 
 .mob-menu-top {
   width: 100%;
-  margin-bottom: 306px;
+}
+@media screen and (min-width: 480px) {
+  .mob-menu-top {
+    margin-bottom: 306px;
+  }
 }
 
 .mob-nav_item:not(:last-child) {
@@ -971,16 +976,15 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .groups-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-right: -30px;
-    margin-bottom: -30px;
-  }
+.groups-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-right: -30px;
+  margin-bottom: -30px;
 }
 @media screen and (min-width: 768px) {
   .groups-list {
