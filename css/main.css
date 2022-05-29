@@ -27,6 +27,10 @@ body {
   font-size: 14px;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -103,6 +107,7 @@ img {
 .backdrop {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
@@ -125,11 +130,17 @@ img {
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
   transition: transform 250ms, -webkit-transform 250ms;
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
   padding: 40px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+  }
 }
 
 .modal-close-btn {
