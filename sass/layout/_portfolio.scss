@@ -14,6 +14,11 @@
     justify-content: center;
   }
 }
+.portfolio-item {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
+}
 .portfolio-item .button.current {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
