@@ -113,6 +113,22 @@ img {
   background: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms, visibility 250ms;
   transition: opacity 250ms, visibility 250ms;
+  overflow: hidden;
+}
+@media screen and (min-width: 480px) {
+  .backdrop {
+    padding: 93px 15px 94px 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    padding: 207px 159px 208px 159px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .backdrop {
+    padding: 221px 536px 222px 536px;
+  }
 }
 
 .backdrop.is-hidden .modal {
@@ -121,17 +137,9 @@ img {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 250ms;
-  transition: -webkit-transform 250ms;
-  transition: transform 250ms;
-  transition: transform 250ms, -webkit-transform 250ms;
-  width: 528px;
-  min-height: 581px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   padding: 40px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
@@ -139,7 +147,22 @@ img {
 @media screen and (min-width: 480px) {
   .modal {
     width: 450px;
-    min-height: 609px;
+    max-height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
   }
 }
 
@@ -180,7 +203,7 @@ img {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -270,8 +293,8 @@ img {
 
 .check-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   display: -webkit-box;
@@ -305,10 +328,19 @@ img {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+}
 
 .check-link {
   color: var(--accent-color);
   margin-left: 4px;
+  text-decoration: none;
 }
 .check-link:hover, .check-link:focus {
   color: var(--accent-color);
@@ -327,6 +359,8 @@ img {
   font-size: 16px;
   line-height: 2;
   letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
   color: var(--primary-white-color);
   background: var(--accent-color);
   border-radius: 4px;
@@ -524,14 +558,19 @@ img {
 .mob-menu {
   position: fixed;
   z-index: 1;
-  overflow-y: auto;
+  overflow-y: hidden;
   top: 0;
   left: 0;
   background-color: #ffffff;
   width: 100vw;
   height: 100vh;
-  padding-top: 10px;
+  padding-top: 48px;
   padding-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+  .mob-menu {
+    display: none;
+  }
 }
 .mob-menu .container {
   display: -webkit-box;
@@ -551,6 +590,9 @@ img {
 }
 
 .menu-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
   display: block;
   margin-left: auto;
   border: 0;
@@ -620,17 +662,22 @@ img {
 .mob-soc-list_item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
+.mob-soc-list_item:not(:last-child):not(:last-child) {
+  margin-right: 10px;
+}
 
 .mob-soc_link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 4.5vmin;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  padding: 10px;
+  padding-right: 10px;
 }
-.mob-soc_link:not(:first-child) {
-  padding-left: 10px;
+@media screen and (min-width: 480px) {
+  .mob-soc_link {
+    font-size: 18px;
+  }
 }
 
 .no-scroll {
