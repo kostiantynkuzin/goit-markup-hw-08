@@ -3,10 +3,5 @@ body {
   color: #757575;
   background-color: var(--primary-white-color);
   font-size: 14px;
-}
-body.modal-open {
-  overflow: hidden;
-}
-body.menu-open {
-  overflow: hidden;
+  overflow-x: hidden;
 }

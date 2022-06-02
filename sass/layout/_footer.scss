@@ -24,14 +24,11 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
   }
 }
 .footer-adress {
   margin-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    margin-left: 76px;
-    margin-right: 165px;
-  }
   @media screen and (min-width: 1200px) {
     margin-left: 0;
     margin-right: 70px;
