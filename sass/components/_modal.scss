@@ -7,15 +7,6 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms, visibility 250ms;
   overflow: hidden;
-  @media screen and (min-width: 480px) {
-    padding: 93px 15px 94px 15px;
-  }
-  @media screen and (min-width: 768px) {
-    padding: 207px 159px 208px 159px;
-  }
-  @media screen and (min-width: 1200px) {
-    padding: 221px 536px 222px 536px;
-  }
 }
 .backdrop.is-hidden .modal {
   transform: scale(0.5);
@@ -28,17 +19,17 @@
   background-color: var(--primary-white-color);
   border-radius: 4px;
   @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 450px;
     max-height: 609px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms;
   }
   @media screen and (min-width: 1200px) {
     width: 528px;
     min-height: 581px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms;
   }
 }
 .modal-close-btn {
