@@ -119,24 +119,29 @@ img {
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   width: 90%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition: -webkit-transform 250ms;
-  transition: -webkit-transform 250ms;
-  transition: transform 250ms;
-  transition: transform 250ms, -webkit-transform 250ms;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   padding: 40px;
   background-color: var(--primary-white-color);
   border-radius: 4px;
 }
 @media screen and (min-width: 480px) {
   .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 450px;
     max-height: 609px;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
   }
 }
 @media screen and (min-width: 1200px) {
